@@ -1,0 +1,111 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+<style >
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF5EE;
+}
+
+p {
+    padding-top: 30px;
+}
+
+.small {
+    font-size: 16px;
+    font-family: arial;
+}
+
+.column33 {
+    float: left;
+    width: 33%;
+    padding: 10px;
+}
+
+.column50 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    /*height: 100px;  Should be removed. Only for demonstration */
+}
+
+.column100 {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    /*height: 100px;  Should be removed. Only for demonstration */
+}
+
+.divcolumn3 {
+    float: left;
+    width: 33%;
+    padding: 0px 10px;
+}
+
+.divcolumn {
+    float: left;
+    width: 50%;
+    padding: 0px 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: rgb(192, 192, 192);
+    border-image: initial;
+}
+
+legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: calc(1.275rem + .3vw);
+    line-height: inherit;
+}
+
+.form-button {
+    background: #047991;
+    border: 1px solid #ddd;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+}

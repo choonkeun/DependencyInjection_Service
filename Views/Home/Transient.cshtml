@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Transient";
+}
+
+<div class="text-center">
+    <h3>Guid of _transient1.GetGuid(): @ViewBag.Transient11</h3>
+    <h3>Guid of _transient1.GetGuid(): @ViewBag.Transient12</h3>
+    <h3>Guid of _transient2.GetGuid(): @ViewBag.Transient21</h3>
+    <h3>Guid of _transient2.GetGuid(): @ViewBag.Transient22</h3>
+</div>
+
+<p>
+    Useful for?
+</p>
+
+<ul>
+    <li>Database Access</li>
+    <li>File Access</li>
+    <li>Services that should dispose of their state</li>
+    <li>When you need a fresh instance of an object every single time - jwt, jwt.x509</li>
+</ul>

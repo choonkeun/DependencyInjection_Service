@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h1 class="display-4">Welcome to Dependency Injection !!!</h1>
+</div>
+
+<div class="row">
+    <div class="column100">
+        <fieldset>
+            <legend><h3>Three modes on Services registration in Program.cs</h3></legend>
+            <div>builder.Services.AddSingleton&lt;ISingletonService, SingletonService&gt;(); </div>
+            <div>builder.Services.AddScoped&lt;IScopedService, ScopedService&gt;();    </div>
+            <div>builder.Services.AddTransient&lt;ITransientService, TransientService&gt;(); </div>
+            <div class="row">
+                <div class="divcolumn3 display-6">Singleton</div>
+                <div class="divcolumn3 display-6">Scoped</div>
+                <div class="divcolumn3 display-6">Transient</div>
+            </div>
+
+        </fieldset>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column100">
+        <fieldset>
+            <legend><h3>HomeController</h3></legend>
+<pre>
+public HomeController(
+    <b>ISingletonService</b> singleton1, <b>ISingletonService</b> singleton2,          // always same
+    <b>IScopedService</b>    scoped1,    <b>IScopedService</b> scoped2,                // scoped1, scoped1 value is different if HTTP is different
+    <b>ITransientService</b> transient1, <b>ITransientService</b> transient2           // transient1, transient2 value is different
+)
+{
+    _singleton1 = singleton1;           //always return same value 
+    _singleton2 = singleton2;           //always return same value 
+
+    _scoped1 = scoped1;                 //always return same value per one HTTP request
+    _scoped2 = scoped2;                 //always return same value per one HTTP request but different value than 'scoped1'
+
+    _transient1 = transient1;           //return same value per Dependency Injection request
+    _transient2 = transient2;           //return same value per Dependency Injection request but return different value than 'transient1'
+}
+</pre>
+        </fieldset>
+    </div>
+</div>
+
+
+<p>
+</p>
+
+<ul>
+
+</ul>
